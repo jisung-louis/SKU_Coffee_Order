@@ -14,10 +14,11 @@
         android:layout_marginTop="20dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/home_menu"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
+            android:onClick="home_menu"
             android:src="@drawable/home_topbar_menu" />
 
         <TextView
@@ -31,30 +32,33 @@
             android:layout_marginHorizontal="20dp"/>
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/home_barcode"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
+            android:onClick="home_barcode"
             android:src="@drawable/home_topbar_barcode" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/home_notification"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
+            android:onClick="home_notification"
             android:src="@drawable/home_topbar_notification" />
 
     </LinearLayout>
 
+    <!-- 이벤트베너라 따로 온클릭 생성x -->
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/home_eventvanner"
         android:layout_width="match_parent"
         android:layout_height="235dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/home_eventbanner1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/home_text_welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="\n\n\n\n홍길동 님\n환영합니다."
@@ -70,7 +74,7 @@
         android:background="#685050">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/home_text_point"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="내 포인트 0점"
@@ -81,7 +85,7 @@
             android:layout_marginTop="5dp"/>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/home_text_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="●성결대점\n\n"
@@ -100,37 +104,42 @@
         android:layout_marginTop="25dp">
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/home_order"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:onClick="home_coffee"
             app:srcCompat="@drawable/home_bottombar_coffee" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/home_payment"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="25dp"
+            android:onClick="home_payment"
             app:srcCompat="@drawable/home_bottombar_payment" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/home_coupon"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="25dp"
+            android:onClick="home_coupon"
             app:srcCompat="@drawable/home_bottombar_coupon" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/home_map"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="25dp"
+            android:onClick="home_map"
             app:srcCompat="@drawable/home_bottombar_map" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/home_myinfo"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="25dp"
+            android:onClick="home_myinfo"
             app:srcCompat="@drawable/home_bottombar_myinfo" />
 
     </LinearLayout>
