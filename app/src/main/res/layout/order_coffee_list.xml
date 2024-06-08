@@ -9,7 +9,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/payment_coffeeImage_sample"
+            android:id="@+id/coffeeList_coffeeImage"
             android:layout_width="75dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -19,13 +19,16 @@
             android:id="@+id/coffeeList_coffeeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:layout_gravity="center" />
 
         <TextView
             android:id="@+id/coffeeList_coffeePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 </GridLayout>

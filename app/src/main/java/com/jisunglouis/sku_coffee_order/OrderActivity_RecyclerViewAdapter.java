@@ -5,13 +5,17 @@ import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class OrderActivity_RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private String[] mData;
+    private String[] mData,mData2;
+    private int[] mImages;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
     private int selectedPosition = -1;
@@ -23,6 +27,13 @@ public class OrderActivity_RecyclerViewAdapter extends RecyclerView.Adapter<Recy
     public OrderActivity_RecyclerViewAdapter(Context context, String[] data, int viewType) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        this.viewType = viewType;
+    }
+    public OrderActivity_RecyclerViewAdapter(Context context, String[] data, String[] data2,int[] images, int viewType) {
+        this.mInflater = LayoutInflater.from(context);
+        this.mData = data;
+        this.mData2 = data2;
+        this.mImages = images;
         this.viewType = viewType;
     }
 
@@ -45,6 +56,7 @@ public class OrderActivity_RecyclerViewAdapter extends RecyclerView.Adapter<Recy
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+
         String item = mData[position];
         if (holder instanceof CategoryViewHolder) {
             CategoryViewHolder categoryHolder = (CategoryViewHolder) holder;
@@ -55,8 +67,11 @@ public class OrderActivity_RecyclerViewAdapter extends RecyclerView.Adapter<Recy
                 categoryHolder.myTextView.setPaintFlags(categoryHolder.myTextView.getPaintFlags() & (~Paint.UNDERLINE_TEXT_FLAG));
             }
         } else if (holder instanceof CoffeeViewHolder) {
+            String item2 = mData2[position];
             CoffeeViewHolder coffeeHolder = (CoffeeViewHolder) holder;
-            coffeeHolder.myTextView.setText(item);
+            coffeeHolder.coffeeName.setText(item);
+            coffeeHolder.coffeePrice.setText(item2+"원");
+            coffeeHolder.coffeeImage.setImageResource(mImages[position]);
         }
     }
 
@@ -81,11 +96,14 @@ public class OrderActivity_RecyclerViewAdapter extends RecyclerView.Adapter<Recy
     }
 
     public class CoffeeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView myTextView;
+        TextView coffeeName,coffeePrice;
+        ImageView coffeeImage;
 
         CoffeeViewHolder(View itemView) {
             super(itemView);
-            myTextView = itemView.findViewById(R.id.coffeeList_coffeeName);
+            coffeeName = itemView.findViewById(R.id.coffeeList_coffeeName);
+            coffeePrice = itemView.findViewById(R.id.coffeeList_coffeePrice);
+            coffeeImage = itemView.findViewById(R.id.coffeeList_coffeeImage);
             itemView.setOnClickListener(this);
         }
 
@@ -105,7 +123,12 @@ public class OrderActivity_RecyclerViewAdapter extends RecyclerView.Adapter<Recy
         selectedPosition = position;
         notifyDataSetChanged();
     }
-
+    public void updateData(String[] newData,String[] newData2, int[] newImages) {
+        mData=newData;
+        mData2=newData2;
+        mImages=newImages;
+        notifyDataSetChanged();
+    }
     // 아이템 클릭 리스너 인터페이스
     public interface ItemClickListener {
         void onItemClick(View view, int position, int viewType);
