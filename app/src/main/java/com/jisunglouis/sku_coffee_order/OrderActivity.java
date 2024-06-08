@@ -1,8 +1,10 @@
 package com.jisunglouis.sku_coffee_order;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class OrderActivity extends AppCompatActivity implements OrderActivity_RecyclerViewAdapter.ItemClickListener {
@@ -17,5 +19,13 @@ public class OrderActivity extends AppCompatActivity implements OrderActivity_Re
             data[i-1]="friend #"+1;
         }
         RecyclerView recyclerView = findViewById(R.id.rview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL,false));
+        adapter = new OrderActivity_RecyclerViewAdapter(this,data);
+        adapter.setClickListener(this);
+        recyclerView.setAdapter(adapter);
+    }
+    @Override
+    public void onItemClick(View view, int position){
+
     }
 }
