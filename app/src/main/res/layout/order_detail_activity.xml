@@ -42,7 +42,6 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="147dp"
-        android:src="@tools:sample/avatars"
         tools:srcCompat="@drawable/home_bottombar_coffee" />
 
     <TextView
@@ -76,7 +75,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HOT&ICE"
+        android:text="HOTCE"
         android:textSize="25dp"
         android:textStyle="bold" />
 
