@@ -34,7 +34,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/payment_coffeeImage_sample"
+            android:id="@+id/payment_coffee_image_sample"
             android:layout_width="75dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -47,14 +47,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/payment_coffeeName"
+                android:id="@+id/payment_coffee_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="커피 이름"
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/payment_coffeeIceOrHot"
+                android:id="@+id/payment_coffee_ice_or_hot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="10dp"
@@ -62,21 +62,21 @@
                 android:text="ICE or HOT" />
 
             <TextView
-                android:id="@+id/payment_coffeeSize"
+                android:id="@+id/payment_coffee_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="10dp"
                 android:text="커피 사이즈(S/M/T)" />
 
             <TextView
-                android:id="@+id/payment_coffeeCount"
+                android:id="@+id/payment_coffee_count"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="10dp"
                 android:text="커피 개수(수량: ?개)" />
 
             <TextView
-                android:id="@+id/payment_coffeePrice"
+                android:id="@+id/payment_coffee_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -99,14 +99,14 @@
         android:layout_marginHorizontal="20dp">
 
         <TextView
-            android:id="@+id/payment_requestText"
+            android:id="@+id/payment_request_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="요청사항"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/payment_requestInput"
+            android:id="@+id/payment_request_input"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:ems="10"
@@ -137,14 +137,14 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/payment_applyPointText"
+                android:id="@+id/payment_apply_point_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="포인트 적용"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/payment_remainingPoint"
+                android:id="@+id/payment_remaining_point"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="잔여 : 0p"
@@ -160,7 +160,7 @@
             android:layout_marginTop="5dp">
 
             <EditText
-                android:id="@+id/payment_"
+                android:id="@+id/payment_points_input"
                 android:layout_width="200dp"
                 android:layout_height="32dp"
                 android:ems="10"
@@ -178,8 +178,8 @@
                 android:text="원"
                 android:textStyle="bold" />
 
-            <android.widget.Button
-                android:id="@+id/button"
+            <Button
+                android:id="@+id/payment_points_button"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:background="@color/black"
@@ -206,26 +206,27 @@
         android:layout_marginHorizontal="20dp">
 
         <TextView
-            android:id="@+id/payment_paymentMethodText"
+            android:id="@+id/payment_payment_method_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="결제수단"
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/payment_method_group"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp">
 
             <RadioButton
-                android:id="@+id/payment_radioBtn_creditCard"
+                android:id="@+id/payment_radio_btn_credit_card"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:text="  신용카드"
                 android:textSize="12dp"/>
 
             <RadioButton
-                android:id="@+id/payment_radioBtn_prepaidCard"
+                android:id="@+id/payment_radio_btn_prepaid_card"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:text="  선불카드 - 잔액 0원"
@@ -233,6 +234,7 @@
                 android:layout_marginTop="5dp" />
         </RadioGroup>
     </LinearLayout>
+
     <View
         android:id="@+id/divider4"
         android:layout_width="match_parent"
@@ -252,7 +254,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/payment_productPriceText"
+                android:id="@+id/payment_product_price_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="상품금액"
@@ -264,7 +266,7 @@
                 android:layout_weight="1"/>
 
             <TextView
-                android:id="@+id/payment_productPrice"
+                android:id="@+id/payment_product_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -273,8 +275,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="원" />
-
+                android:layout_marginLeft="3dp"
+                android:text="원"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -284,39 +287,7 @@
             android:layout_marginTop="5dp">
 
             <TextView
-                android:id="@+id/payment_discountPriceText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="할인금액"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-            <TextView
-                android:id="@+id/payment_discountPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="원" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp" >
-
-            <TextView
-                android:id="@+id/payment_paymentPriceText"
+                android:id="@+id/payment_total_price_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="결제금액"
@@ -328,52 +299,70 @@
                 android:layout_weight="1"/>
 
             <TextView
-                android:id="@+id/payment_paymentPrice"
+                android:id="@+id/payment_total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:textStyle="bold"
-                android:textColor="#FF0000" />
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:text="원"
-                android:textColor="#FF0000"/>
-
+                android:textStyle="bold" />
         </LinearLayout>
-
-        </LinearLayout>
-
+    </LinearLayout>
 
     <View
         android:id="@+id/divider5"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="10dp"
         android:background="?android:attr/listDivider" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp">
 
         <CheckBox
-            android:id="@+id/payment_checkBox_agreement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/payment_termsAgreeText"
+            android:id="@+id/payment_check_box_agreement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="주문상품정보 및 결제대행 서비스 이용약관에 모두 동의합니다."
             android:layout_gravity="center"
-            android:textSize="10dp"/>
+            android:background="#44888888" />
+
+        <TextView
+            android:id="@+id/payment_agreement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:text="위 사항에 모두 동의합니다."
+            android:textStyle="bold"
+            android:textSize="10dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/payment_btn_continuePayment"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="결제 진행" />
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp">
+
+        <Button
+            android:id="@+id/payment_btn_continue_payment"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="결제 진행"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
 </LinearLayout>
