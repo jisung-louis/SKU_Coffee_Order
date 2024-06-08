@@ -100,10 +100,12 @@
         android:layout_height="1dp"
         android:background="?android:attr/listDivider" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rview2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" >
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>
