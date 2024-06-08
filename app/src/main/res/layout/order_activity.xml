@@ -14,6 +14,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
+            android:onClick="order_button_backward"
             android:src="@drawable/order_backward" />
 
         <TextView

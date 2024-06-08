@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MenuActivity" android:label=".MenuActivity"></activity>
+        <activity android:name=".BarcodeActivity" android:label=".BarcodeActivity"></activity>
+        <activity android:name=".OrderActivity" android:label=".OrderActivity"></activity>
     </application>
 
 </manifest>

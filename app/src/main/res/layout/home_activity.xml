@@ -107,7 +107,7 @@
             android:id="@+id/home_order"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:onClick="home_coffee"
+            android:onClick="home_order"
             app:srcCompat="@drawable/home_bottombar_coffee" />
 
         <ImageView

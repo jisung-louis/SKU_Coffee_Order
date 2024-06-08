@@ -2,6 +2,7 @@ package com.jisunglouis.sku_coffee_order;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,6 +28,17 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void home_menu(View v) {
+        Intent intent = new Intent(HomeActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
 
+    public void home_barcode(View v) {
+        Intent intent = new Intent(HomeActivity.this, BarcodeActivity.class);
+        startActivity(intent);
+    }
+
+    public void home_order(View v) {
+        Intent intent = new Intent(HomeActivity.this, OrderActivity.class);
+        startActivity(intent);
     }
 }
