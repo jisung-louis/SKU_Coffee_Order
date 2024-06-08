@@ -1,5 +1,6 @@
 package com.jisunglouis.sku_coffee_order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -65,12 +66,27 @@ public class OrderActivity extends AppCompatActivity implements OrderActivity_Re
         list_adapter.setClickListener(this);
         recyclerView2.setAdapter(list_adapter);
     }
-
+    int categoryPosition=0;
     @Override
     public void onItemClick(View view, int position, int viewType) {
+
         if (viewType == OrderActivity_RecyclerViewAdapter.VIEW_TYPE_1) {
+            categoryPosition=position;
             category_adapter.setSelectedPosition(position);
             list_adapter.updateData(data2[position],data2_price[position],coffeeImages[position] );
         }
+        else{
+            Intent intent = new Intent(OrderActivity.this, OrderdetailActivity.class);
+            intent.putExtra("categoryPosition",categoryPosition);
+            intent.putExtra("coffeePosition",position);
+            intent.putExtra("coffeeName",data2[categoryPosition][position]);
+            intent.putExtra("coffeeImage",coffeeImages[categoryPosition][position]);
+            intent.putExtra("coffeePrice",data2_price[categoryPosition][position]);
+            startActivity(intent);
+        }
+    }
+    public void order_button_backward(View view){
+        Intent intent = new Intent(OrderActivity.this, HomeActivity.class);
+        startActivity(intent);
     }
 }

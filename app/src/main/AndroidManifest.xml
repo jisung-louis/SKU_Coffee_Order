@@ -33,6 +33,8 @@
         <activity android:name=".FindcafeActivity" android:label=".FindcafeActivity"></activity>
         <activity android:name=".NewsActivity" android:label=".NewsActivity"></activity>
         <activity android:name=".ServicecenterActivity" android:label=".ServicecenterActivity"></activity>
+        <activity android:name=".OrderdetailActivity" android:label=".OrderdetailActivity"></activity>
+        <activity android:name=".PaymentActivity" android:label=".PaymentActivity"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -51,8 +52,14 @@ public class PaymentActivity extends AppCompatActivity {
         });
 
         // 커피 이름을 받아와서 텍스트뷰에 설정
-        String selectedCoffee = getIntent().getStringExtra("selectedCoffee");
-        updateCoffeeInformation(selectedCoffee);
+        String selectedCoffee = getIntent().getStringExtra("coffeeName");
+        boolean selectedCoffeeIsICE = getIntent().getBooleanExtra("iceOrHot",true);
+        int selectedCoffeeIsMedium = getIntent().getIntExtra("isMedium",0);
+        int selectedCoffeeCount = getIntent().getIntExtra("coffeeCount",1);
+        int selectedCoffeePrice = getIntent().getIntExtra("coffeePrice",0);
+        int selectedCoffeeImage = getIntent().getIntExtra("coffeeImage",R.drawable.home_bottombar_coffee);
+
+        updateCoffeeInformation(selectedCoffee,selectedCoffeeIsICE,selectedCoffeeIsMedium,selectedCoffeeCount,selectedCoffeePrice,selectedCoffeeImage);
     }
 
     private void showPointsUsagePopup() {
@@ -73,12 +80,33 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void goToNextPage() {
-        Intent intent = new Intent(PaymentActivity.this, CheckoutActivity.class);
+        Toast.makeText(PaymentActivity.this, "결제가 완료돠었습니다.", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(PaymentActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 
-    private void updateCoffeeInformation(String coffeeName) {
-        TextView coffeeNameTextView = findViewById(R.id.payment_coffee_name);
+    private void updateCoffeeInformation(String coffeeName,boolean isIce,int isMedium,int coffeeCount,int coffeePrice, int coffeeImage) {
+        TextView coffeeNameTextView,iceOrHotTextView,coffeeSizeTextView,coffeeCountTextView,coffeePriceTextview;
+        ImageView coffeeImageView;
+
+        coffeeNameTextView = findViewById(R.id.payment_coffee_name);
+        iceOrHotTextView = findViewById(R.id.payment_coffee_ice_or_hot);
+        coffeeSizeTextView = findViewById(R.id.payment_coffee_size);
+        coffeeCountTextView = findViewById(R.id.payment_coffee_count);
+        coffeePriceTextview = findViewById(R.id.payment_coffee_price);
+        coffeeImageView = findViewById(R.id.payment_coffee_image);
+
         coffeeNameTextView.setText(coffeeName);
+        if(isIce) iceOrHotTextView.setText("ICE");
+        else iceOrHotTextView.setText("HOT");
+        if(isMedium==-1)
+            coffeeSizeTextView.setText("S");
+        else if (isMedium==0)
+            coffeeSizeTextView.setText("M");
+        else
+            coffeeSizeTextView.setText("T");
+        coffeeCountTextView.setText("수량 : "+coffeeCount+"개");
+        coffeePriceTextview.setText(coffeePrice+"원");
+        coffeeImageView.setImageResource(coffeeImage);
     }
 }

@@ -34,7 +34,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/payment_coffee_image_sample"
+            android:id="@+id/payment_coffee_image"
             android:layout_width="75dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"

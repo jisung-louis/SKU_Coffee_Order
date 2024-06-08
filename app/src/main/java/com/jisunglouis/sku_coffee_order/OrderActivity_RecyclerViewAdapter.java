@@ -18,7 +18,7 @@ public class OrderActivity_RecyclerViewAdapter extends RecyclerView.Adapter<Recy
     private int[] mImages;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
-    private int selectedPosition = -1;
+    public int selectedPosition = 0;
     public static final int VIEW_TYPE_1 = 1;
     public static final int VIEW_TYPE_2 = 2;
     private int viewType;
