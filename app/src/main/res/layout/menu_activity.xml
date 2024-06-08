@@ -39,6 +39,7 @@
             android:id="@+id/button_menuIntroduce"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="menuintroduce"
             android:text="메뉴 소개"
             android:textSize="18dp" />
 
@@ -52,6 +53,7 @@
             android:id="@+id/button_accumulate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="accumulate"
             android:text="적립"
             android:textSize="18dp" />
 
@@ -65,6 +67,7 @@
             android:id="@+id/button_coupon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="coupon"
             android:text="쿠폰"
             android:textSize="18dp" />
 
@@ -78,6 +81,7 @@
             android:id="@+id/button_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="order"
             android:text="주문"
             android:textSize="18dp" />
 
@@ -91,6 +95,7 @@
             android:id="@+id/button_orderHistory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="orderhistory"
             android:text="주문내역"
             android:textSize="18dp" />
 
@@ -104,6 +109,7 @@
             android:id="@+id/button_prepaidCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="prepaidcard"
             android:text="선불카드"
             android:textSize="18dp" />
 
@@ -117,6 +123,7 @@
             android:id="@+id/button_myMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="mymenu"
             android:text="MY메뉴"
             android:textSize="18dp" />
 
@@ -130,6 +137,7 @@
             android:id="@+id/button_findCafe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="findcafe"
             android:text="매장찾기"
             android:textSize="18dp" />
 
@@ -143,6 +151,7 @@
             android:id="@+id/button_news"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="news"
             android:text="새소식"
             android:textSize="18dp" />
 
@@ -156,6 +165,7 @@
             android:id="@+id/button_customerServiceCenter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="servicecenter"
             android:text="고객센터"
             android:textSize="18dp" />
 
@@ -178,6 +188,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="5dp"
+            android:onClick="naver"
             android:src="@drawable/menu_naver" />
 
         <ImageView
@@ -185,6 +196,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="5dp"
+            android:onClick="facebook"
             android:src="@drawable/menu_facebook" />
 
         <ImageView
@@ -192,6 +204,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="5dp"
+            android:onClick="instagram"
             android:src="@drawable/menu_instagram" />
     </LinearLayout>
 

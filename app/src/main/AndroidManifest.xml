@@ -24,6 +24,15 @@
         <activity android:name=".MenuActivity" android:label=".MenuActivity"></activity>
         <activity android:name=".BarcodeActivity" android:label=".BarcodeActivity"></activity>
         <activity android:name=".OrderActivity" android:label=".OrderActivity"></activity>
+        <activity android:name=".MenuIntroductionActivity" android:label=".MenuIntroductionActivity"></activity>
+        <activity android:name=".AccumulateActivity" android:label=".AccumulateActivity"></activity>
+        <activity android:name=".CouponActivity" android:label=".CouponActivity"></activity>
+        <activity android:name=".OrderhistoryActivity" android:label=".OrderhistoryActivity"></activity>
+        <activity android:name=".PrepaidActivity" android:label=".PrepaidActivity"></activity>
+        <activity android:name=".MymenuActivity" android:label=".MymenuActivity"></activity>
+        <activity android:name=".FindcafeActivity" android:label=".FindcafeActivity"></activity>
+        <activity android:name=".NewsActivity" android:label=".NewsActivity"></activity>
+        <activity android:name=".ServicecenterActivity" android:label=".ServicecenterActivity"></activity>
     </application>
 
 </manifest>
