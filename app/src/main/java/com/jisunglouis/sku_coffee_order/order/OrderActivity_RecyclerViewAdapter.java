@@ -1,4 +1,4 @@
-package com.jisunglouis.sku_coffee_order;
+package com.jisunglouis.sku_coffee_order.order;
 
 import android.content.Context;
 import android.graphics.Paint;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.jisunglouis.sku_coffee_order.R;
 
 import java.util.List;
 

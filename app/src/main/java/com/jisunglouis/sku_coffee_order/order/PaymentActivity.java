@@ -1,4 +1,4 @@
-package com.jisunglouis.sku_coffee_order;
+package com.jisunglouis.sku_coffee_order.order;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,11 +9,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.jisunglouis.sku_coffee_order.R;
+import com.jisunglouis.sku_coffee_order.home.HomeActivity;
 
 public class PaymentActivity extends AppCompatActivity {
 

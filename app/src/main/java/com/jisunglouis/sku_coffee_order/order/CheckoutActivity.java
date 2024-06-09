@@ -1,9 +1,11 @@
-package com.jisunglouis.sku_coffee_order;
+package com.jisunglouis.sku_coffee_order.order;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.jisunglouis.sku_coffee_order.R;
 
 public class CheckoutActivity extends AppCompatActivity {
 

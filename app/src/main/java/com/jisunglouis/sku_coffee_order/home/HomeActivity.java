@@ -1,4 +1,4 @@
-package com.jisunglouis.sku_coffee_order;
+package com.jisunglouis.sku_coffee_order.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.jisunglouis.sku_coffee_order.order.OrderActivity;
+import com.jisunglouis.sku_coffee_order.R;
+import com.jisunglouis.sku_coffee_order.menu.MenuActivity;
 
 public class HomeActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.jisunglouis.sku_coffee_order;
+package com.jisunglouis.sku_coffee_order.order;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jisunglouis.sku_coffee_order.OrderActivity_RecyclerViewAdapter;
+import com.jisunglouis.sku_coffee_order.R;
+import com.jisunglouis.sku_coffee_order.home.HomeActivity;
 
 public class OrderActivity extends AppCompatActivity implements OrderActivity_RecyclerViewAdapter.ItemClickListener {
     OrderActivity_RecyclerViewAdapter category_adapter, list_adapter;

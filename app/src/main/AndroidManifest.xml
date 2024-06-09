@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SKU_Coffee_Order"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".home.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,20 +21,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuActivity" android:label=".MenuActivity"></activity>
-        <activity android:name=".BarcodeActivity" android:label=".BarcodeActivity"></activity>
-        <activity android:name=".OrderActivity" android:label=".OrderActivity"></activity>
-        <activity android:name=".MenuIntroductionActivity" android:label=".MenuIntroductionActivity"></activity>
-        <activity android:name=".AccumulateActivity" android:label=".AccumulateActivity"></activity>
-        <activity android:name=".CouponActivity" android:label=".CouponActivity"></activity>
-        <activity android:name=".OrderhistoryActivity" android:label=".OrderhistoryActivity"></activity>
-        <activity android:name=".PrepaidActivity" android:label=".PrepaidActivity"></activity>
-        <activity android:name=".MymenuActivity" android:label=".MymenuActivity"></activity>
-        <activity android:name=".FindcafeActivity" android:label=".FindcafeActivity"></activity>
-        <activity android:name=".NewsActivity" android:label=".NewsActivity"></activity>
-        <activity android:name=".ServicecenterActivity" android:label=".ServicecenterActivity"></activity>
-        <activity android:name=".OrderdetailActivity" android:label=".OrderdetailActivity"></activity>
-        <activity android:name=".PaymentActivity" android:label=".PaymentActivity"></activity>
+        <activity android:name=".home.BarcodeActivity" android:label=".BarcodeActivity"></activity>
+
+        <activity android:name=".menu.MenuActivity" android:label=".MenuActivity"></activity>
+        <activity android:name=".menu.AccumulateActivity" android:label=".AccumulateActivity"></activity>
+        <activity android:name=".menu.CouponActivity" android:label=".CouponActivity"></activity>
+        <activity android:name=".menu.FindcafeActivity" android:label=".FindcafeActivity"></activity>
+        <activity android:name=".menu.MenuIntroductionActivity" android:label=".MenuIntroductionActivity"></activity>
+        <activity android:name=".menu.MymenuActivity" android:label=".MymenuActivity"></activity>
+        <activity android:name=".menu.NewsActivity" android:label=".NewsActivity"></activity>
+        <activity android:name=".menu.OrderhistoryActivity" android:label=".OrderhistoryActivity"></activity>
+        <activity android:name=".menu.PrepaidActivity" android:label=".PrepaidActivity"></activity>
+        <activity android:name=".menu.ServicecenterActivity" android:label=".ServicecenterActivity"></activity>
+
+        <activity android:name=".order.OrderActivity" android:label=".OrderActivity"></activity>
+        <activity android:name=".order.OrderdetailActivity" android:label=".OrderdetailActivity"></activity>
+        <activity android:name=".order.PaymentActivity" android:label=".PaymentActivity"></activity>
+        <activity android:name=".order.CheckoutActivity"></activity>
     </application>
 
 </manifest>

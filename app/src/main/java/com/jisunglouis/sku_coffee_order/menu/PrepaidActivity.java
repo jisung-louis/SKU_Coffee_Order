@@ -1,10 +1,12 @@
-package com.jisunglouis.sku_coffee_order;
+package com.jisunglouis.sku_coffee_order.menu;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.jisunglouis.sku_coffee_order.R;
 
 public class PrepaidActivity extends AppCompatActivity {
 

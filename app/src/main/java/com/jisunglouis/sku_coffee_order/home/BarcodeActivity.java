@@ -1,12 +1,13 @@
-package com.jisunglouis.sku_coffee_order;
+package com.jisunglouis.sku_coffee_order.home;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.jisunglouis.sku_coffee_order.R;
 
 public class BarcodeActivity extends AppCompatActivity {
 
