@@ -87,6 +87,7 @@ public class PaymentActivity extends AppCompatActivity {
 
     private void updateCoffeeInformation(String coffeeName,boolean isIce,int isMedium,int coffeeCount,int coffeePrice, int coffeeImage) {
         TextView coffeeNameTextView,iceOrHotTextView,coffeeSizeTextView,coffeeCountTextView,coffeePriceTextview;
+        TextView payment_price,total_price;
         ImageView coffeeImageView;
 
         coffeeNameTextView = findViewById(R.id.payment_coffee_name);
@@ -95,6 +96,9 @@ public class PaymentActivity extends AppCompatActivity {
         coffeeCountTextView = findViewById(R.id.payment_coffee_count);
         coffeePriceTextview = findViewById(R.id.payment_coffee_price);
         coffeeImageView = findViewById(R.id.payment_coffee_image);
+
+        payment_price = findViewById(R.id.payment_product_price);
+        total_price = findViewById(R.id.payment_total_price);
 
         coffeeNameTextView.setText(coffeeName);
         if(isIce) iceOrHotTextView.setText("ICE");
@@ -108,5 +112,8 @@ public class PaymentActivity extends AppCompatActivity {
         coffeeCountTextView.setText("수량 : "+coffeeCount+"개");
         coffeePriceTextview.setText(coffeePrice+"원");
         coffeeImageView.setImageResource(coffeeImage);
+
+        payment_price.setText(coffeePrice+"");
+        total_price.setText(coffeePrice+"");
     }
 }
